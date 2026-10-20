@@ -14,11 +14,13 @@ export default function Profile({ name, bio, imageSrc }: ProfileProps) {
         alt={`${name} 프로필 사진`}
         width={144}
         height={144}
-        className="h-36 w-36 rounded-full border-2 border-foreground object-cover"
+        className="h-28 w-28 rounded-full object-cover shadow-[0_12px_32px_-8px_var(--shadow)] ring-4 ring-card-border sm:h-32 sm:w-32"
         priority
       />
-      <h1 className="mt-6 text-2xl font-bold">{name}</h1>
-      <p className="mt-2 text-base opacity-70">{bio}</p>
+      <h1 className="mt-6 text-2xl font-bold tracking-tight">{name}</h1>
+      <p className="mt-2 text-balance text-[15px] leading-relaxed text-muted">
+        {bio}
+      </p>
     </section>
   );
 }
